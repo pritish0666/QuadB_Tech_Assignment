@@ -10,13 +10,24 @@
     <nav>
       <div class="logo">HODLINFO</div>
       <div class="nav-center">
-        <select>
-          <option>INR</option>
+        <select id="currencySelect">
+          <option value="INR">INR</option>
         </select>
-        <select>
-          <option>BTC</option>
+        <select id="cryptoSelect">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="USDT">USDT</option>
+          <option value="XRP">XRP</option>
+          <option value="TRX">TRX</option>
+          <option value="DASH">DASH</option>
+          <option value="ZEC">ZEC</option>
+          <option value="XEM">XEM</option>
+          <option value="IOST">IOST</option>
+          <option value="WIN">WIN</option>
+          <option value="BTT">BTT</option>
+          <option value="WRX">WRX</option>
         </select>
-        <button>BUY BTC</button>
+        <button class="buyButton" id="buyButton">BUY BTC</button>
       </div>
       <div class="nav-right">
         <div class="progress-circle" id="progressCircle">
@@ -31,39 +42,31 @@
     </nav>
 
     <main>
-      
-
-<table>
-  <thead>
-    <tr>
-      <th>#</th> 
-      <th>Name</th>
-      <th>Last</th>
-      <th>Buy</th>
-      <th>Sell</th>
-      <th>Volume</th>
-      <th>Base Unit</th>
-    </tr>
-  </thead>
-  <tbody id="cryptoTableBody">
-    
-  </tbody>
-</table>
-
-
-
+      <table>
+        <thead>
+          <tr>
+            <th>#</th> 
+            <th>Name</th>
+            <th>Last</th>
+            <th>Buy</th>
+            <th>Sell</th>
+            <th>Volume</th>
+            <th>Base Unit</th>
+          </tr>
+        </thead>
+        <tbody id="cryptoTableBody"></tbody>
+      </table>
     </main>
 
     <footer>
-    <div class="footer-content">
+      <div class="footer-content">
         <span>&copy; 2024 HodlInfo. All rights reserved.</span>
         <a href="mailto:support@hodlinfo.com" class="support-link">Support</a>
+      </div>
+    </footer>
+    <div class="add-to-home-screen">
+      <button id="addToHomeScreen">Add HodlInfo to home screen</button>
     </div>
-</footer>
-<div class="add-to-home-screen">
-    <button id="addToHomeScreen">Add hodlinfo to home screen</button>
-</div>
-
 
     <script src="script.js"></script>
   </body>

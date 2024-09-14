@@ -24,6 +24,10 @@ nav {
   border-radius: 10px;
 }
 
+.tele:hover {
+  cursor: pointer;
+}
+
 .dark-mode .tele {
   background-color: #21c2ba;
   color: white;
@@ -49,6 +53,12 @@ button {
   border: none;
   background-color: #eaecf3;
   color: black;
+  
+}
+
+.buyButton, select,button
+:hover{
+    cursor: pointer;
 }
 
 .dark-mode select,

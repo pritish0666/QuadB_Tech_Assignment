@@ -77,6 +77,11 @@ app.get("/api/cryptos", async (req, res) => {
   }
 });
 
+app.get("/contact/telegram", (req, res) => {
+  return res.sendFile(path.resolve("./Public/telegram.html"));
+});
+
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });

@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
   const cryptoTableBody = document.getElementById("cryptoTableBody");
   const progressCircle = document.getElementById("progressCircle");
+  const buyButton = document.getElementById("buyButton");
+  const cryptoSelect = document.getElementById("cryptoSelect");
 
   let timeLeft = 60;
   const totalTime = 60;
@@ -19,9 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(updateTimer, 1000);
 
-  window.openTelegram = function () {
-    window.open("https://telegram.org", "_blank");
-  };
+ window.openTelegram = function () {
+   window.location.href = "/contact/telegram"; // Make sure this matches the server route
+ };
+
 
   document.body.classList.add("dark-mode");
   darkModeToggle.checked = true;
@@ -55,6 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchAndRenderCryptos();
+
+  cryptoSelect.addEventListener("change", function () {
+    const selectedCrypto = this.value;
+    buyButton.textContent = `BUY ${selectedCrypto}`;
+  });
 
   document
     .getElementById("addToHomeScreen")
