@@ -21,10 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(updateTimer, 1000);
 
- window.openTelegram = function () {
-   window.location.href = "/contact/telegram"; // Make sure this matches the server route
- };
-
+  window.openTelegram = function () {
+    window.location.href = "/contact/telegram"; // Make sure this matches the server route
+  };
 
   document.body.classList.add("dark-mode");
   darkModeToggle.checked = true;
@@ -62,6 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
   cryptoSelect.addEventListener("change", function () {
     const selectedCrypto = this.value;
     buyButton.textContent = `BUY ${selectedCrypto}`;
+  });
+
+  buyButton.addEventListener("click", function () {
+    window.open("https://wazirx.com/signup");
   });
 
   document
