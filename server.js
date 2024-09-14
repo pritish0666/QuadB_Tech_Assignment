@@ -3,6 +3,7 @@ import path from "path";
 import axios from "axios";
 import dotenv from "dotenv";
 import connectDB from "./db/db.js";
+import { Crypto } from "./models/crypto.model.js";
 
 const app = express();
 dotenv.config();
@@ -39,7 +40,10 @@ const fetchCryptos = async () => {
         };
       });
 
+
+
     //console.log(dataMain);
+    const cryptos = await Crypto.insertMany(dataMain);
   } catch (error) {
     console.error(error, "error fetching data");
   }
