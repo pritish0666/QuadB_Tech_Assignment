@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HodlInfo</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Top 10 Cryptocurrencies</h1>
-        <ul id="crypto-list">
-            <!-- List of cryptocurrencies will be injected here -->
-        </ul>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">HODLINFO</div>
+      <div class="nav-center">
+        <select>
+          <option>INR</option>
+        </select>
+        <select>
+          <option>BTC</option>
+        </select>
+        <button>BUY BTC</button>
+      </div>
+      <div class="nav-right">
+        <div class="progress-circle" id="progressCircle">
+          <div class="timer" id="timer">60</div>
+        </div>
+        <button class="tele" onclick="openTelegram()">Connect Telegram</button>
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+
+    <main>
+      
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th> 
+      <th>Name</th>
+      <th>Last</th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Volume</th>
+      <th>Base Unit</th>
+    </tr>
+  </thead>
+  <tbody id="cryptoTableBody">
+    
+  </tbody>
+</table>
+
+
+
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <span>&copy; 2024 HodlInfo. All rights reserved.</span>
+        <a href="mailto:support@hodlinfo.com" class="support-link">Support</a>
     </div>
-    <script src="app.js"></script>
-</body>
+</footer>
+<div class="add-to-home-screen">
+    <button id="addToHomeScreen">Add hodlinfo to home screen</button>
+</div>
+
+
+    <script src="script.js"></script>
+  </body>
 </html>
